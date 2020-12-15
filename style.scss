@@ -1,0 +1,41 @@
+// Colors
+$primaryColor: #0d1117;
+$secondaryColor: #3bca00;
+
+// Font-Size
+$title: 2em;
+$subTitle: 1.5em;
+$text: 1em;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: $primaryColor;
+  font-family: 'IBM Plex Mono', monospace;
+  color: $secondaryColor;
+}
+
+nav {
+  height: 4em;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 3em;
+    padding: 0 2em;
+    width: auto;
+  }
+
+  p {
+    font-size: $title;
+  }
+}
+
