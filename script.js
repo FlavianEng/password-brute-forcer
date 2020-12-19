@@ -1,19 +1,22 @@
-import * as arrays from './characters';
-
-// Variables
+// #region VARIABLES
+const charLower = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',];
+const charUpper = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',];
+const charNumeric = ['0','1','2','3','4','5','6','7','8','9'];
+const charSpecial = [' ','!','#','$','%','&','\'','(',')','*','+',',','-','.','/',':',';','<','=','>','?','@','[','\\',']','^','_','`','{','|','}','~','"',];
 const msgProgress = document.querySelector('#progress');
 const msgInfo = document.querySelector('#info');
 const msgSuccess = document.querySelector('#success');
 const msgError = document.querySelector('#error');
 const pwdLvl1 = 'rjvawr';
 const pwdLvl2 = 'HmDJHY';
-const pwdLvl3 = 'dtzxbG';
+const pwdLvl3 = 'dt11bG';
 const pwdLvl4 = '0`I=AU';
 let pwdWanted = pwdLvl1;
 let lastKeystrokes = {};
+// #endregion
 
-// Main
-// #region frontend
+// #region MAIN
+// #region FRONTEND
 function toggleMenu (el) {
   if (!el.classList.contains('pill-active')){
     document.querySelector('.pill-active').classList.remove('pill-active');
@@ -42,6 +45,7 @@ function activeLvl(levelToActivate) {
       break;
 
     default: 
+      // eslint-disable-next-line no-console
       console.error('error -- levelToActivate -- case Default');
       break;
   }
@@ -53,12 +57,13 @@ function checkPassword() {
   if (inputPwd === pwdWanted) {
     msgError.style.display='none';
     msgSuccess.style.display='block';
-  } else {
+    return true;
+  } 
     msgProgress.style.display='none';
     msgInfo.style.display='none';
     msgSuccess.style.display='none';
     msgError.style.display='block';
-  }
+    return false;
 }
 
 document.addEventListener('keydown', (e) => {
@@ -90,5 +95,4 @@ function resetMessages() {
   msgProgress.style.display='none';
   msgSuccess.style.display='none';
 }
-
-
+// #endregion

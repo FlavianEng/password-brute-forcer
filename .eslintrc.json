@@ -24,7 +24,6 @@
         "no-debugger": "warn",
         "prefer-template": "error",
         "no-self-assign": "warn",
-        "max-len": ["warn", 100],
         "no-unused-vars": "off"
     }
 }

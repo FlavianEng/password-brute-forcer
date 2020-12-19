@@ -1,24 +1,22 @@
 {
-  "name": "html-basic-template",
+  "name": "bruter",
   "version": "1.0.0",
   "description": "",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "live-server build",
     "build": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FlavianEng/html-basic-template.git"
+    "url": "git+https://github.com/FlavianEng/password-brute-forcer.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Flavian Engevin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/FlavianEng/html-basic-template/issues"
+    "url": "https://github.com/FlavianEng/password-brute-forcer/issues"
   },
-  "homepage": "https://github.com/FlavianEng/html-basic-template#readme",
+  "homepage": "https://github.com/FlavianEng/password-brute-forcer/blob/dev/README.md",
   "devDependencies": {
     "eslint": "^7.15.0",
     "eslint-config-airbnb-base": "^14.2.1",
