@@ -4,6 +4,7 @@ This is a 3 hours dev challenge in pure JavaScript.
 ### The goal
 All you have to do is prepare an algorithm that use brute force to find the password.
 
+
 **There is 4 levels :** 
    1. The password for the first level is  *"rjvawr"*. 
       It only use lower letters. 
