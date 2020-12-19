@@ -35,7 +35,12 @@ $borderRed: 0.3rem solid $hackerRed;
   overflow-x: hidden;
 }
 
-a, a:hover {
+p {
+  cursor: default;
+}
+
+a, a:hover, a:focus {
+  cursor: pointer;
   text-decoration: none;
   color: #3bca00;
 }
@@ -44,6 +49,10 @@ button {
   border: none;
   background: none;
   color: $hackerGreen;
+}
+
+:focus {
+  outline: none;
 }
 
 // Basic styles
@@ -112,7 +121,7 @@ section {
   padding: 1rem;
   a {
     padding-bottom: 0.5rem ;
-    &:hover {
+    &:hover, &:focus {
       color: $hackerRed;
       border-bottom: $borderRed;
     }
@@ -121,7 +130,7 @@ section {
   &-active a{
     border-bottom: $borderGreen;
 
-    &:hover{
+    &:hover, &:focus{
       color: $hackerGreen;
       border-bottom: $borderGreen;
     }
@@ -173,14 +182,14 @@ section {
       padding: 0.3rem;
       border: none;
       
-      &:hover {
+      &:hover, &:focus {
         font-weight: bold;
       }
     }
   }
 }
 
-.modal {
+.commandPrompt {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -217,7 +226,11 @@ section {
     height: 0.2rem;
     width: 0.6rem;
     display: inline-block;
-    margin-left: 0.7rem;
     background: $hackerGreen;
   }
+}
+
+#progress, #info, #success, #error {
+  display: none;
+  color:$hackerRed;
 }
