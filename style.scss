@@ -1,0 +1,229 @@
+// MIXIN POUR FLEX
+// MIXIN POUR FLEX
+// MIXIN POUR FLEX
+// MIXIN POUR FLEX
+
+// VARIABLES
+// Colors
+$terminalBlack: black;
+$hackerBlack: #0d1117;
+$hackerGreen: #3bca00;
+$hackerRed: red;
+$disabled: #808080;
+
+// Font-Size
+$title: 2rem;
+$subTitle: 1.5rem;
+$text: 1rem;
+
+// Font-Family
+$font:'IBM Plex Mono', monospace;
+$terminalFont: 'vcr_osd_monoregular';
+
+
+// Border
+$borderGreen: 0.3rem solid $hackerGreen;
+$borderRed: 0.3rem solid $hackerRed;
+
+
+// STYLES
+// Reset styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+p {
+  cursor: default;
+}
+
+a, a:hover, a:focus {
+  cursor: pointer;
+  text-decoration: none;
+  color: #3bca00;
+}
+
+button {
+  border: none;
+  background: none;
+  color: $hackerGreen;
+}
+
+:focus {
+  outline: none;
+}
+
+// Basic styles
+* {
+  font-family: $font;
+}
+
+
+// Custom styles
+body {
+  background-color: $hackerBlack;
+  color: $hackerGreen;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+  // Take all the device screen size
+  height: 100vh;
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  height: 4rem;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 3rem;
+    padding-right: 2rem;
+    width: auto;
+  }
+
+  p {
+    font-size: $title;
+  }
+}
+
+section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+
+.pills {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.pill {
+  padding: 1rem;
+  a {
+    padding-bottom: 0.5rem ;
+    &:hover, &:focus {
+      color: $hackerRed;
+      border-bottom: $borderRed;
+    }
+  }
+
+  &-active a{
+    border-bottom: $borderGreen;
+
+    &:hover, &:focus{
+      color: $hackerGreen;
+      border-bottom: $borderGreen;
+    }
+  }
+}
+
+#form {
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  align-content: center;
+  border: $borderGreen;
+
+
+  .input div{
+    padding: 0.5rem;
+    width: 25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    label {
+      padding-right: 2rem;
+    }
+
+    input{
+      border: none;
+      width: 100%;
+      padding: 0.2rem;
+      color: $hackerBlack;
+
+      &:disabled {
+        background: $disabled;
+      }
+    }
+  }
+
+  .btn {
+    align-self: center;
+    padding: 0.5rem;
+
+    &-signin {
+      cursor: pointer;
+      color: $hackerGreen;
+      background: none;
+      padding: 0.3rem;
+      border: none;
+      
+      &:hover, &:focus {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.commandPrompt {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  align-content: space-between;
+  width: 40rem;
+
+  align-self: flex-end;
+
+  div {
+    padding: 0.3rem;
+  }
+
+  &-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: white;
+    color: $hackerBlack;
+    width: 100%;
+    img {
+      height: 1rem;
+      padding: 0 1rem 0 0.5rem;
+    }
+  }
+
+  &-content {
+    background: $terminalBlack;
+    width: 100%;
+    height: 12rem;
+  }
+
+  &-cursor {
+    height: 0.2rem;
+    width: 0.6rem;
+    display: inline-block;
+    background: $hackerGreen;
+  }
+}
+
+#progress, #info, #success, #error {
+  display: none;
+  color:$hackerRed;
+}

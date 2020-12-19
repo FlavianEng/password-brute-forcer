@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">    <link rel="stylesheet" href="./css/style.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Bruter</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <section id="header">
+      <header>
+        <img src="./assets/password.svg" alt="Password" />
+        <p>Bruter</p>
+      </header>
+      <!-- 4 Pills -->
+      <section>
+        <div class="pills">
+          <div id="lvl1" class="pill pill-active" onclick="toggleMenu(this)">
+            <a>Level 1</a>
+          </div>
+          <div id="lvl2" class="pill" onclick="toggleMenu(this)">
+            <a>Level 2</a>
+          </div>
+          <div  id="lvl3" class="pill" onclick="toggleMenu(this)">
+            <a>Level 3</a>
+          </div>
+          <div  id="lvl4" class="pill" onclick="toggleMenu(this)">
+            <a>Level 4</a>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- FORM -->
+    <section id="form">
+      <div class="input">
+        <div class="email">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            disabled
+            value="ultrastronghackerlmao@disabled.com"
+          />
+        </div>
+
+        <div class="password">
+          <label for="pwd">Password</label>
+          <input id="secretPassword" type="password" name="pwd" />
+        </div>
+      </div>
+
+      <div class="btn">
+        <button class="btn-signin" onclick="checkPassword()">Sign in</button>
+      </div>
+    </section>
+
+    <!-- COMMAND PROMPT -->
+    <section" class="commandPrompt">
+      <div class="commandPrompt-header">
+        <img src="./assets/terminal.svg" alt="terminal">
+        <p>Command prompt</p>
+      </div>
+      <div class="commandPrompt-content">
+        <p>
+          [version 10.0.163827.287637]
+          <br>
+          <br>
+          >> Press SPACE + ENTER to hack the password
+          <br>
+          <span id="progress">>> Hacking in progress<br></span>
+          <span id="info"><br></span>
+          <span id="success">>> Well done ! You hacked me :)<br></span>
+          <span id="error">>> Wrong password, moron <br></span>
+          >> <span class="commandPrompt-cursor"></span>
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
+
+<script src="./script.js"></script>

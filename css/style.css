@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+p {
+  cursor: default;
+}
+
+a, a:hover, a:focus {
+  cursor: pointer;
+  text-decoration: none;
+  color: #3bca00;
+}
+
+button {
+  border: none;
+  background: none;
+  color: #3bca00;
+}
+
+:focus {
+  outline: none;
+}
+
+* {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+body {
+  background-color: #0d1117;
+  color: #3bca00;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  height: 4rem;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header img {
+  height: 3rem;
+  padding-right: 2rem;
+  width: auto;
+}
+
+header p {
+  font-size: 2rem;
+}
+
+section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+
+.pills {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.pill {
+  padding: 1rem;
+}
+
+.pill a {
+  padding-bottom: 0.5rem;
+}
+
+.pill a:hover, .pill a:focus {
+  color: red;
+  border-bottom: 0.3rem solid red;
+}
+
+.pill-active a {
+  border-bottom: 0.3rem solid #3bca00;
+}
+
+.pill-active a:hover, .pill-active a:focus {
+  color: #3bca00;
+  border-bottom: 0.3rem solid #3bca00;
+}
+
+#form {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  align-content: center;
+  border: 0.3rem solid #3bca00;
+}
+
+#form .input div {
+  padding: 0.5rem;
+  width: 25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+#form .input div label {
+  padding-right: 2rem;
+}
+
+#form .input div input {
+  border: none;
+  width: 100%;
+  padding: 0.2rem;
+  color: #0d1117;
+}
+
+#form .input div input:disabled {
+  background: #808080;
+}
+
+#form .btn {
+  align-self: center;
+  padding: 0.5rem;
+}
+
+#form .btn-signin {
+  cursor: pointer;
+  color: #3bca00;
+  background: none;
+  padding: 0.3rem;
+  border: none;
+}
+
+#form .btn-signin:hover, #form .btn-signin:focus {
+  font-weight: bold;
+}
+
+.commandPrompt {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  align-content: space-between;
+  width: 40rem;
+  align-self: flex-end;
+}
+
+.commandPrompt div {
+  padding: 0.3rem;
+}
+
+.commandPrompt-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: white;
+  color: #0d1117;
+  width: 100%;
+}
+
+.commandPrompt-header img {
+  height: 1rem;
+  padding: 0 1rem 0 0.5rem;
+}
+
+.commandPrompt-content {
+  background: black;
+  width: 100%;
+  height: 12rem;
+}
+
+.commandPrompt-cursor {
+  height: 0.2rem;
+  width: 0.6rem;
+  display: inline-block;
+  background: #3bca00;
+}
+
+#progress, #info, #success, #error {
+  display: none;
+  color: red;
+}
