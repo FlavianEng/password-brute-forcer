@@ -14,6 +14,8 @@ To Install this project :
 1. npm install
 
 
-RENAME SCSS VARIABLE
+###TO DO :
+- Define Font-size for each element
+- Create mixin for flex element
 
 
