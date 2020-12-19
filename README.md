@@ -14,7 +14,7 @@ To Install this project :
 1. npm install
 
 
-###TO DO :
+### TO DO :
 - Define Font-size for each element
 - Create mixin for flex element
 
