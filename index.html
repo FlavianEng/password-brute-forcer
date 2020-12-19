@@ -6,25 +6,81 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
+    <link rel="stylesheet" href="./css/style.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap"
       rel="stylesheet"
     />
-    <title>Tailwind CSS Demo</title>
+    <title>Bruter</title>
   </head>
   <body>
-    <div class="h-64">
-      <div class="p-4 m-4 bg-green-600">
-        <h1 class="text-2xl font-bold text-white">
-          Tailwind CSS Demo
-        </h1>
+    <!-- HEADER -->
+    <section id="header">
+      <header>
+        <img src="./assets/password.svg" alt="Password" />
+        <p>Bruter</p>
+      </header>
+      <!-- 4 Pills -->
+      <section>
+        <div class="pills">
+          <div class="pill pill-active">
+            <a href="">Level 1</a>
+          </div>
+          <div class="pill">
+            <a href="">Level 2</a>
+          </div>
+          <div class="pill">
+            <a href="">Level 3</a>
+          </div>
+          <div class="pill">
+            <a href="">Level 4</a>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- FORM -->
+    <section id="form">
+      <div class="input">
+        <div class="email">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            disabled
+            value="ultrastronghackerlmao@disabled.com"
+          />
+        </div>
+
+        <div id="pwd" class="password">
+          <label for="pwd">Password</label>
+          <input type="password" name="pwd" />
+        </div>
       </div>
-      <div class="p-4 m-4 bg-green-300 h-full">
-        <h2 class="text-green-900">
-          Have much fun using Tailwind CSS
-        </h2>
+
+      <div class="btn">
+        <button class="btn-signin">Sign in</button>
       </div>
-    </div>
+    </section>
+
+    <!-- HACKER MODAL -->
+    <section" class="modal">
+      <div class="modal-header">
+        <img src="./assets/terminal.svg" alt="terminal">
+        <p>Command prompt</p>
+      </div>
+      <div class="modal-content">
+        <p>
+          [version 10.0.163827.287637]
+          <br>
+          <br>
+          >> Press SPACE + ENTER to hack the password
+          <br>
+          >><span class="modal-cursor"></span>
+        </p>
+      </div>
+    </section>
   </body>
 </html>
 
